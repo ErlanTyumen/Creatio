@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Угадай число</title>
+</head>
+
+<body>
+    <script>varanswer = parseInt(Math.random() * 100);
+        var answer=parseInt(Math.random() *100);
+        var attempt=1;
+        var user = false;
+        while (true) {
+            var player = !user ? "Игрок 1": "Игрок 2";
+            var userAnswer = prompt("Угадайте числоот 0 до 100. Попытка No " + attempt + ". Чтобы выйти введите не число" + player);
+            userAnswer = parseInt(userAnswer);
+            if (userAnswer > answer) {
+                alert("Ваш ответ больше загаданногочисла.");
+                user = !user;
+            }
+            else if (userAnswer < answer) {
+                alert("Ваш ответ меньше загаданногочисла.");
+                user = !user;
+            }
+            else if (userAnswer == answer) {
+                alert("Вы угадали!");
+                break;
+            }
+            else
+                break;
+            attempt++;
+        }
+    </script>
+</body>
+
+</html>

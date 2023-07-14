@@ -1,0 +1,20 @@
+<title>Угадай загадку</title>
+<script>
+    var answer = prompt("Речка спятила с ума — \nПо домам пошла сама.").toLowerCase();
+    if(answer == "водопровод") {
+        alert("Угадали. GAME OVER");
+    }
+    else {
+        answer = prompt("Не угадали.\nВот ещё три загадки.\n\nМузыкант, певец, рассказчик —\nА всего труба да ящик.").toLowerCase();
+        var count = 0;
+        if(answer == "громофон" || answer == "gramophone")
+            count++;
+        answer = prompt("Ах, не трогайте меня:\nОбожгу и без огня!").toLowerCase();
+        if(answer == "крапива" || answer == "nettle")
+            count++;
+        answer = prompt("Маленькие домики по улице бегут,\nМальчиков и девочек домики везут.").toLowerCase();
+        if(answer == "машины" || answer == "cars")
+            count++;
+        alert("Угадываний: " + String(count));
+    }
+</script>

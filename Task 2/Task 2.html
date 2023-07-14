@@ -1,0 +1,10 @@
+<title>Банковская программа</title>
+<script>
+    var sum = +prompt("Summ");
+    var per = 1 + prompt("Percent") / 100;
+
+    for(var i = 0; i < 5; i++) {
+        sum = sum * per;
+        document.write(sum.toFixed(3) + "<br>");
+    }
+</script>
