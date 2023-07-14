@@ -1,0 +1,32 @@
+<title>Угадай загадку</title>
+<script>
+    function rand_question() {
+        var questions = ["Речка спятила с ума — По домам пошла сама","Музыкант, певец, рассказчик — А всего труба да ящик.","Ах, не трогайте меня: Обожгу и без огня!","Маленькие домики по улице бегут, Мальчиков и девочек домики везут."];
+        var answer = ["водопровод",["громофон","gramophone"],["крапива","nettle"],["машины","cars"]];
+        var rand = Math.floor(Math.random() * (questions.length))
+        var com = [questions[rand], answer[rand]];
+        return com;
+    }
+
+    var que = rand_question();
+    var answer = prompt(que[0]).toLowerCase();
+    if(que[1].includes(answer)) {
+        alert("Угадали. GAME OVER");
+    }
+    else {
+        var count = 0;
+        que = rand_question();
+        answer = prompt(que[0]).toLowerCase();
+        if(que[1].includes(answer))
+            count++;
+        que = rand_question();
+        answer = prompt(que[0]).toLowerCase();
+        if(que[1].includes(answer))
+            count++;
+        que = rand_question();
+        answer = prompt(que[0]).toLowerCase();
+        if(que[1].includes(answer))
+            count++;
+        alert("Угадываний: " + String(count));
+    }
+</script>
